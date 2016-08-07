@@ -1,0 +1,788 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMS</title>
+
+    <link href="css/Third-Party-CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Third-Party-CSS/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
+    <link href="css/Third-Party-CSS/bootstrap-tour.min.css" rel="stylesheet">
+    <link href="css/Third-Party-CSS/popbox.css" rel="stylesheet">
+    <link href="css/Third-Party-CSS/checkbox-style.css" rel="stylesheet">
+
+    <!--Custom Styles-->
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/navbar-top.css" rel="stylesheet">
+    <link href="css/navbar2.css" rel="stylesheet">
+    <link href="css/navbar-bottom.css" rel="stylesheet">
+    <link href="css/side-panels.css" rel="stylesheet">
+    <link href="css/table-work.css" rel="stylesheet">
+    <link href="css/custom-icon.css" rel="stylesheet">
+    <link href="css/shadow.css" rel="stylesheet">
+    <!--Custom Styles-->
+
+</head>
+
+<body>
+
+<!------------------------------------------------------------ MAIN CONTAINER (Write No HTML Outside) -----------------------------------------------------------------START-->
+<div class="container-full-width">
+
+
+<!-------------------------------------------------------------------- Navigation Bar Fixed Top -----------------------------------------------------------------------START-->
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-bottom-margin" role="navigation">
+
+    <header class="navbar-header">
+        <a class="navbar-brand" href="#" id="application-logo">PMS</a>
+    </header>
+
+    <div class="collapse navbar-collapse col-lg-offset-2" id="bs-example-navbar-collapse-1">
+
+        <form action="" class="navbar-form navbar-left">
+
+            <div class="form-group" id="main-div">
+                <div class="input-group" id="inline-div-1">
+                    <div class="input-group-btn" id="inline-div-2">
+                        <button type="button" class="btn btn-default dropdown-toggle" id="search-categories" data-toggle="dropdown">
+                            All <span class="caret"></span>
+                        </button>
+
+                        <ul class="dropdown-menu" id="test-drop-down" role="menu">
+                            <li id="item-projects"><a id="dropdown-item-projects" href="#">Projects</a></li>
+                            <li id="item-tasks"><a id="dropdown-item-tasks" href="#">Tasks</a></li>
+                            <li id="item-files"><a id="dropdown-item-files" href="#">Files</a></li>
+                            <li id="item-users"><a id="dropdown-item-users" href="#">Users</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">All</a></li>
+                        </ul>
+
+                    </div>
+
+                    <input type="search" class="form-control" id="search-width" placeholder="Search"/>
+
+                    <div class="input-group-btn" id="inline-div-3">
+                        <button class="btn btn-default" id="search-button" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--</div>-->
+
+        <p class="navbar-text" id="notifications" data-toggle="tooltip" data-original-title="Notifications"><i class="fa fa-comments-o"></i><strong> 7</strong></p>
+        <p class="navbar-text" id="users-online" data-toggle="tooltip" data-original-title="Online Users"><i class="fa fa-user-md"></i><strong> 3</strong></p>
+
+        <!--<div class="">-->
+
+        <div class="navbar-btn navbar-right" id="signed-in-user">
+            <span id="signed-in-user-id">faizan.sg@gmail.com</span>
+
+            <div class="popbox">
+
+                <img class="open img-rounded" id="signed-in-user-pic" src="images/30x30/no-image.png" alt=""/>
+
+                <div style="position:relative;">
+                    <div class='box'>
+                        <div class='arrow'></div>
+                        <div class='arrow-border'></div>
+
+                        <div id="test-content-size">
+
+                            <img class="img-thumbnail pull-left" id="user-pic-inside-popover" src="images/Original_Size/no-image.png" alt=""/>
+
+                            <p id="user-name">Faizan Shakeel</p>
+                            <p id="user-role">Quality Assurance</p>
+                            <p id="user-email">faizan.sg@gmail.com</p>
+
+                            <button class="btn btn-success" id="testing-signout-button">Sign Out</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<!-------------------------------------------------------------------- Navigation Bar Fixed Top -----------------------------------------------------------------------END-->
+
+
+<!-------------------------------------------------------Row-Containing-Buttons-For-Menu-&-Chatting-Panel--------------------------------------------------------------START-->
+
+<div class="row hidden-xs" id="test-second-custom-bar">
+
+    <div class="col-lg-2 col-md-2 col-sm-2" id="123">
+        <button class="btn btn-default" id="menu-opener">Menu <span class="glyphicon glyphicon-book" id="icon-main-options-color"></span></button>
+    </div>
+
+    <!--<div class="col-lg-3 col-md-3 col-sm-3">-->
+    <!--<a href="" id="notification-alert-tag"><span class="glyphicon glyphicon-comment" id="notification-alert"></span> [ <strong id="current-notifications">0</strong> ]</a>-->
+    <!--</div>-->
+
+    <!--<div class="well-sm col-lg-1 col-md-1 col-sm-1 col-lg-push-4 col-md-push-4 col-sm-push-4" id="one-click-panels-expand">-->
+    <!--<button class="btn btn-default" id="expand-tooltip" data-toggle="tooltip" data-original-title="Expand"><i class="fa fa-angle-double-left" id="expand-left"></i><i class="fa fa-angle-double-right" id="expand-right"></i></button>-->
+    <!--<button class="btn btn-default" id="contract-tooltip" data-toggle="tooltip" data-original-title="Contract" style="display: none"><i class="fa fa-angle-double-right" id="contract-left"></i><i class="fa fa-angle-double-left" id="contract-right"></i></button>-->
+    <!--</div>-->
+
+    <!--<div class="col-lg-1 col-md-1 col-sm-1 col-lg-push-4 col-md-push-4 col-sm-push-4" id="one-click-panels-expand">-->
+    <div class="col-lg-1 col-md-1 col-sm-1 col-lg-push-4 col-md-push-4 col-sm-push-4" id="one-click-panels-expand">
+        <button class="btn btn-default" id="expand-tooltip" data-toggle="tooltip" data-original-title="Expand"><i class="fa fa-angle-double-left" id="expand-left"></i><i class="fa fa-angle-double-right" id="expand-right"></i></button>
+        <button class="btn btn-default" id="contract-tooltip" data-toggle="tooltip" data-original-title="Contract" style="display: none"><i class="fa fa-angle-double-right" id="contract-left"></i><i class="fa fa-angle-double-left" id="contract-right"></i></button>
+    </div>
+
+    <!--<div class="col-lg-3 col-md-3 col-sm-2 col-lg-push-1">-->
+    <!--<a href="" id="online-colleagues-count-tag"><span class="glyphicon glyphicon-user" id="online-colleagues-count"></span> [ <strong id="current-users-online">0</strong> ]</a>-->
+    <!--</div>-->
+
+    <div class="col-lg-2 col-md-2 col-sm-2 pull-right">
+        <button class="btn btn-default" id="chatting-list-opener">Work Together <span class="glyphicon glyphicon-comment" id="icon-chat-list-color"></span></button>
+    </div>
+
+</div>
+
+
+<!-------------------------------------------------------Row-Containing-Buttons-For-Menu-&-Chatting-Panel----------------------------------------------------------------END-->
+
+
+<!-------------------------------------------------------Row-Containing-Accordion-&-Table-&-Chatting-Panel-------------------------------------------------------------START-->
+
+<div class="row" id="third-row">
+
+<aside class="panel-group col-lg-2 col-md-2 col-sm-2" id="accordion">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h5 class="panel-title text-center">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                Dashboard
+            </a>
+        </h5>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body accordion-height">
+
+            <!--content-->
+
+            <a href="#" id="project-popover" class="btn btn-default center-block" rel="popover" data-original-title="Project"><i class="fa fa-bar-chart-o pull-left" id="test1"></i>Projects</a>
+            <a href="#" id="task-popover" class="btn btn-default center-block" rel="popover" data-original-title="Task"><i class="fa fa-tasks pull-left" id="test2"></i>Tasks</a>
+            <a href="#" id="file-popover" class="btn btn-default center-block" rel="popover" data-original-title="File"><i class="fa fa-files-o pull-left" id="test3"></i>Files</a>
+            <a href="#" id="user-popover" class="btn btn-default center-block" rel="popover" data-original-title="User"><i class="fa fa-users pull-left" id="test4"></i>Users</a>
+
+            <div class="project-popover-buttons" id="project-popover-buttons" style="display: none">
+                <button class="btn btn-default btn-block" id="new-project" data-toggle="modal" data-target="#new-project-modal-form">New</button>
+                <button class="btn btn-default btn-block" id="edit-project">Edit</button>
+                <button class="btn btn-default btn-block" id="search-project">Search</button>
+            </div>
+
+            <div class="task-popover-buttons" id="task-popover-buttons" style="display: none">
+                <button class="btn btn-default btn-block" id="new-task">New</button>
+                <button class="btn btn-default btn-block" id="edit-task">Edit</button>
+                <button class="btn btn-default btn-block" id="search-task">Search</button>
+            </div>
+
+            <div class="file-popover-buttons" id="file-popover-buttons" style="display: none">
+                <button class="btn btn-default btn-block" id="new-file">New</button>
+                <button class="btn btn-default btn-block" id="edit-file">Edit</button>
+                <button class="btn btn-default btn-block" id="search-file">Search</button>
+            </div>
+
+            <div class="user-popover-buttons" id="user-popover-buttons" style="display: none">
+                <button class="btn btn-default btn-block" id="new-user">New</button>
+                <button class="btn btn-default btn-block" id="edit-user">Edit</button>
+                <button class="btn btn-default btn-block" id="search-user">Search</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading" id="notifications-panel">
+        <h5 class="panel-title text-center">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                Notifications
+            </a>
+        </h5>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+        <div class="panel-body accordion-height" id="accordion-notification">
+
+            <!--content-->
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 1</a><span> modified project </span><a href="">P00101</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">12.02.2013</span>
+                    <span class="pull-right">14:24</span>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 7</a><span> changed status of project </span><a href="">P00200</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">02.08.2013</span>
+                    <span class="pull-right">01:41</span>
+                </div>
+
+
+            </div>
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 2</a><span> joined in project </span><a href="">P00008</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">09.12.2013</span>
+                    <span class="pull-right">16:11</span>
+                </div>
+
+            </div>
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 1</a><span> modified project </span><a href="">P00101</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">12.02.2013</span>
+                    <span class="pull-right">14:24</span>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 7</a><span> changed status of project </span><a href="">P00200</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">02.08.2013</span>
+                    <span class="pull-right">01:41</span>
+                </div>
+
+
+            </div>
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 2</a><span> joined in project </span><a href="">P00008</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">09.12.2013</span>
+                    <span class="pull-right">16:11</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading" id="history-panel">
+        <h5 class="panel-title text-center">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                History
+            </a>
+        </h5>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+        <div class="panel-body accordion-height" id="accordion-history">
+
+            <!--content-->
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">P00101</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">F00004</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">User 2</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">T00019</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">F00131</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">User 8</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">P00101</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">User 2</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">P00021</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">F00071</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">User 12</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">T00012</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">F00042</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">P00021</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">T00031</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</aside>
+<!--Accordion With Popover-->
+
+<!--Table-->
+
+<div class="table-responsive">
+<section class="col-lg-8 col-md-8 col-sm-8" id="table-width">
+
+<ul class="nav nav-tabs nav-justified">
+    <li><a href="#projects-tab-content" data-toggle="tab" id="projects-tab">Projects</a></li>
+    <li><a href="#tasks-tab-content" data-toggle="tab" id="tasks-tab">Tasks</a></li>
+    <li><a href="#files-tab-content" data-toggle="tab" id="files-tab">Files</a></li>
+    <li><a href="#users-tab-content" data-toggle="tab" id="users-tab">Users</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane fade in active" id="projects-tab-content">
+
+    <table class="table table-hover table-striped" id="table-projects-id">
+        <thead id="opasdpamwd">
+        <tr>
+            <th width="4%">
+                <input type="checkbox" value="None" class="css-checkbox parent-check-project" id="new-checkbox-style-test" name="new-style-checkbox" />
+                <label class="css-label lite-gray-check" for="new-checkbox-style-test"></label>
+            </th>
+            <th>Project Name</th>
+            <th>Status</th>
+            <th>Department</th>
+            <th>Target Date</th>
+            <th>Date Started</th>
+            <th>Project Leader</th>
+            <th>Budget</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+
+</div>
+
+<div class="tab-pane fade" id="tasks-tab-content">
+
+    <table class="table table-hover table-striped" id="table-tasks-id">
+        <thead id="task-table-head">
+        <tr>
+            <th width="4%">
+                <input type="checkbox" value="None" class="css-checkbox lrg parent-check-task" id="task-table-checkbox-parent" name="new-style-checkbox" />
+                <label class="css-label lite-gray-check" for="task-table-checkbox-parent"></label>
+            </th>
+            <th>Task Name</th>
+            <th>Status</th>
+            <th>Department</th>
+            <th>Target Date</th>
+            <th>Date Started</th>
+            <th>Task Leader</th>
+        </tr>
+        </thead>
+
+        <tbody id="task-table-body">
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-1" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-1"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-2" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-2"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-3" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-3"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-4" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-4"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-5" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-5"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-6" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-6"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+
+        </tbody>
+    </table>
+
+</div>
+
+<div class="tab-pane fade" id="files-tab-content">
+
+
+    <table class="table table-hover table-striped" id="table-files-id">
+        <thead id="file-table-head">
+        <tr>
+            <th width="4%">
+                <input type="checkbox" value="None" class="css-checkbox lrg parent-check-file" id="file-table-checkbox-parent" name="new-style-checkbox" />
+                <label class="css-label lite-gray-check" for="file-table-checkbox-parent"></label>
+            </th>
+            <th>File Name</th>
+            <th>Type</th>
+            <th>Size</th>
+            <th>Created</th>
+            <th>Last Modified</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-file" id="file-table-checkbox-1" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="file-table-checkbox-1"></label>-->
+        <!--</td>-->
+        <!--<td>F00000</td>-->
+        <!--<td>PDF</td>-->
+        <!--<td>1.5 MB</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-file" id="file-table-checkbox-2" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="file-table-checkbox-2"></label>-->
+        <!--</td>-->
+        <!--<td>F00000</td>-->
+        <!--<td>PDF</td>-->
+        <!--<td>1.5 MB</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-file" id="file-table-checkbox-3" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="file-table-checkbox-3"></label>-->
+        <!--</td>-->
+        <!--<td>F00000</td>-->
+        <!--<td>PDF</td>-->
+        <!--<td>1.5 MB</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--</tr>-->
+
+        </tbody>
+    </table>
+
+</div>
+
+<div class="tab-pane fade" id="users-tab-content">
+
+    <table class="table table-hover table-striped" id="table-users-id">
+        <thead id="user-table-head">
+        <tr>
+            <th width="4%">
+                <input type="checkbox" value="None" class="css-checkbox lrg parent-check-user" id="user-table-checkbox-parent" name="new-style-checkbox" />
+                <label class="css-label lite-gray-check" for="user-table-checkbox-parent"></label>
+            </th>
+            <th>User Name</th>
+            <th>Department</th>
+            <th>Designation</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-user" id="user-table-checkbox-1" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="user-table-checkbox-1"></label>-->
+        <!--</td>-->
+        <!--<td>U00000</td>-->
+        <!--<td>Security</td>-->
+        <!--<td>Quality Assurance Supervisor</td>-->
+        <!--</tr>-->
+
+        </tbody>
+    </table>
+
+</div>
+</div>
+
+<div class="well-lg pull-left" id="well-left">
+
+    <p id="no-of-rec">Showing 10 of 500 Projects</p>
+
+</div>
+
+<div class="well-sm pull-right" id="well-right">
+
+    <ul class="pager pull-right" id="pager-right">
+        <li class="previous"><a href="#">&larr; Previous</a></li>
+        <li class="next"><a href="#">Next &rarr;</a></li>
+    </ul>
+
+</div>
+
+</section>
+
+</div>
+
+
+<!------------------------------------------------------------------------ Context Menu --------------------------------------------------------------------------START-->
+<div class="dropdown clearfix" id="contextMenu">
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display:block;position:static;margin-bottom:5px;">
+        <li><a tabindex="-1" href="#"><i class="fa fa-plus-square-o fa-fw"></i> New</a></li>
+        <li><a tabindex="-1" href="#"><i class="fa fa-info fa-fw"></i> Open</a></li>
+        <li><a tabindex="-1" href="#"><i class="fa fa-pencil-square-o fa-fw"></i> Edit</a></li>
+        <li><a tabindex="-1" href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
+    </ul>
+</div>
+<!------------------------------------------------------------------------ Context Menu --------------------------------------------------------------------------END-->
+
+
+<!------------------------------------------------------------------------ Chatting List -----------------------------------------------------------------------START-->
+<aside class="col-lg-2 col-md-2 col-sm-2" id="chatting-list-fixed">
+    <div class="panel panel-default" id="chatting-list-panel">
+        <div class="panel-heading" id="chat-panel-heading">Chat</div>
+
+        <ul class="list-group" id="chat-ul">
+            <li class="list-group-item">User 1</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 2</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 3</li>
+            <li class="list-group-item">User 4</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 5</li>
+            <li class="list-group-item">User 6</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 7</li>
+            <li class="list-group-item">User 8</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 9</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 10</li>
+            <li class="list-group-item">User 11</li>
+            <li class="list-group-item">User 12</li>
+            <li class="list-group-item">User 13</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 14</li>
+            <li class="list-group-item">User 15</li>
+
+        </ul>
+
+    </div>
+</aside>
+<!------------------------------------------------------------------------ Chatting List -----------------------------------------------------------------------END-->
+</div>
+
+
+<!-------------------------------------------------------Row-Containing-Accordion-&-Table-&-Chatting-Panel---------------------------------------------------------------END-->
+
+
+<!---------------------------------------------------------------------- Navigation Bar Bottom ---------------------------------------------------------------------------START-->
+
+<!--<footer class="navbar navbar-default navbar-fixed-bottom" id="navbar-bottom">-->
+<!--<div class="navbar-text pull-left" id="nav-bottom-elem-left">-->
+<!--JavaScript Project (PMS)-->
+<!--</div>-->
+<!--<a class="btn navbar-btn pull-right" id="nav-bottom-elem-right">PMS</a>-->
+<!--</footer>-->
+
+
+<footer class="navbar navbar-default navbar-fixed-bottom hidden-xs" id="navbar-bottom">
+    <p id="nav-bottom-elem-left">
+        JavaScript Project (PMS)
+    </p>
+</footer>
+
+
+
+<!---------------------------------------------------------------------- Navigation Bar Bottom -----------------------------------------------------------------------------END-->
+
+
+<!------------------------------------------------------------------- Modal [ Add New Project ] --------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="new-project-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="new-project-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">New Project</h4>
+            </div>
+            <div class="modal-body" id="new-project-modal-body">
+
+                <ul class="nav nav-tabs nav-justified">
+                    <li><a href="#home" data-toggle="tab" id="new-project-active-tab">Basic Info</a></li>
+                    <li><a href="#profile" data-toggle="tab">Profile</a></li>
+                    <li><a href="#messages" data-toggle="tab">Messages</a></li>
+                    <li><a href="#settings" data-toggle="tab">Settings</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="home">Auto Generated ID
+                        <br/>Name
+                        <br/>Start Date
+                        <br/>Estimated End Date
+                        <br/>Show Total Duration Calculated Using Start & Estimated End Date
+                    </div>
+                    <div class="tab-pane fade" id="profile">...</div>
+                    <div class="tab-pane fade" id="messages">...</div>
+                    <div class="tab-pane fade" id="settings">...</div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Create</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!------------------------------------------------------------------- Modal [ Add New Project ] ---------------------------------------------------------------------------END-->
+
+</div>
+
+<!------------------------------------------------------------- MAIN CONTAINER (Write No HTML Outside) --------------------------------------------------------------------END-->
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/Third-Party-JS/bootstrap.min.js"></script>
+<!--[if lt IE 9]><script src="js/Third-Party-JS/html5shiv.js"><![endif]-->
+<script src="js/Third-Party-JS/popbox.js"></script>
+<script src="js/Third-Party-JS/bootstrap-tour.min.js"></script>
+<script src="js/Third-Party-JS/respond.js"></script>
+<script src="js/Third-Party-JS/jquery.slimscroll.js"></script>
+
+<!--Custom Scripts-->
+<script src="js/scrollbar.js"></script>
+<script src="js/navbar-top.js"></script>
+<script src="js/navbar2.js"></script>
+<script src="js/side-panels.js"></script>
+<script src="js/main-menu-popover.js"></script>
+<script src="js/table-work.js"></script>
+<script src="js/tour-wizard.js"></script>
+<!--Custom Scripts-->
+
+</body>
+</html>

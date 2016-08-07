@@ -1,0 +1,82 @@
+/* this is my custom CSS */
+
+#table-width
+{
+    /*overflow: auto;*/
+    /*display: inline;*/
+    /*position: fixed;*/
+    /*margin-left: 0px;*/
+    /*margin-right: 0px;*/
+    /*width: 1257px;*/
+}
+
+#table-projects-id
+{
+    /*margin-bottom: 10px;*/
+    /*border: dashed;*/
+}
+/*#table-projects-id tr:nth-child(odd)*/
+#table-projects-id tr
+{
+    height: 39px;
+    /*color: #006699;*/
+
+    /*border: dashed;*/
+}
+
+#table-heading-panel
+{
+    text-align: center;
+}
+
+
+#no-of-rec
+{
+    margin-left: -13px;
+}
+
+#button-previous
+{
+    margin-left: 648px;
+}
+
+#button-next
+{
+    width: 103px;
+    margin-right: -15px;
+}
+
+#table-footer-panel
+{
+    /*padding: 0px;*/
+    margin-top: -4px;
+    border: none;
+}
+
+#table-projects-id thead tr th
+{
+    /*line-height: 240%;*/
+    /*line-height: 30px;*/
+    /*color: #398439;*/
+    vertical-align: middle;
+}
+
+#table-projects-id tbody tr td
+{
+    /*line-height: 240%;*/
+    /*line-height: 30px;*/
+    /*color: #398439;*/
+    vertical-align: middle;
+}
+
+
+#new-checkbox-style-test
+{
+    /*vertical-align: middle;*/
+    /*text-align: center;*/
+}
+
+#contextMenu {
+    position: absolute;
+    display:none;
+}

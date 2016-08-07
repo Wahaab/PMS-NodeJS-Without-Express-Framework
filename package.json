@@ -1,0 +1,29 @@
+{
+    "name": "documents-export-2013-12-21",
+    "version": "0.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+
+    "dependencies": {
+
+        "connect" : "*",
+        "express" : "*",
+        "querystring" : "*",
+        "websocket" : "*",
+        "jade" : "*",
+        "mongoose" : "*",
+        "socket.io": "*",
+        "gridfs-stream": "*",
+        "socketio-file-upload" : "*",
+        "delivery": "*",
+        "mime": "*"
+           },
+
+
+    "author": "Wahaab JB",
+    "license": "BSD-2-Clause"
+}

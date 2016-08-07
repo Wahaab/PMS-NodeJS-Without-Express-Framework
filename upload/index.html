@@ -1,0 +1,1989 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMS</title>
+
+    <link href="css/Third-Party-CSS/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Third-Party-CSS/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
+    <link href="css/Third-Party-CSS/bootstrap-tour.min.css" rel="stylesheet">
+    <link href="css/Third-Party-CSS/popbox.css" rel="stylesheet">
+    <link href="css/Third-Party-CSS/checkbox-style.css" rel="stylesheet">
+
+    <!--Custom Styles-->
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/navbar-top.css" rel="stylesheet">
+    <link href="css/navbar2.css" rel="stylesheet">
+    <link href="css/navbar-bottom.css" rel="stylesheet">
+    <link href="css/side-panels.css" rel="stylesheet">
+    <link href="css/table-work.css" rel="stylesheet">
+    <link href="css/custom-icon.css" rel="stylesheet">
+    <link href="css/shadow.css" rel="stylesheet">
+    <!--Custom Styles-->
+
+</head>
+
+<body>
+
+<!------------------------------------------------------------ MAIN CONTAINER (Write No HTML Outside) -----------------------------------------------------------------START-->
+<div class="container-full-width">
+
+
+<!-------------------------------------------------------------------- Navigation Bar Fixed Top -----------------------------------------------------------------------START-->
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-bottom-margin" role="navigation">
+
+    <header class="navbar-header">
+        <a class="navbar-brand" href="#" id="application-logo">PMS</a>
+    </header>
+
+    <div class="collapse navbar-collapse col-lg-offset-2" id="bs-example-navbar-collapse-1">
+
+        <form action="" class="navbar-form navbar-left">
+
+            <div class="form-group" id="main-div">
+                <div class="input-group" id="inline-div-1">
+                    <div class="input-group-btn" id="inline-div-2">
+                        <button type="button" class="btn btn-default dropdown-toggle" id="search-categories" data-toggle="dropdown">
+                            All <span class="caret"></span>
+                        </button>
+
+                        <ul class="dropdown-menu" id="test-drop-down" role="menu">
+                            <li id="item-projects"><a id="dropdown-item-projects" href="#">Projects</a></li>
+                            <li id="item-tasks"><a id="dropdown-item-tasks" href="#">Tasks</a></li>
+                            <li id="item-files"><a id="dropdown-item-files" href="#">Files</a></li>
+                            <li id="item-users"><a id="dropdown-item-users" href="#">Users</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">All</a></li>
+                        </ul>
+
+                    </div>
+
+                    <input type="search" class="form-control" id="search-width" placeholder="Search"/>
+
+                    <div class="input-group-btn" id="inline-div-3">
+                        <button class="btn btn-default" id="search-button" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--</div>-->
+
+        <p class="navbar-text" id="notifications" data-toggle="tooltip" data-original-title="Notifications"><i class="fa fa-comments-o"></i><strong> 7</strong></p>
+        <p class="navbar-text" id="users-online" data-toggle="tooltip" data-original-title="Online Users"><i class="fa fa-user-md"></i><strong> 3</strong></p>
+
+        <!--<div class="">-->
+
+        <div class="navbar-btn navbar-right" id="signed-in-user">
+            <span id="signed-in-user-id">faizan.sg@gmail.com</span>
+
+            <div class="popbox">
+
+                <img class="open img-rounded" id="signed-in-user-pic" src="images/30x30/no-image.png" alt=""/>
+
+                <div style="position:relative;">
+                    <div class='box'>
+                        <div class='arrow'></div>
+                        <div class='arrow-border'></div>
+
+                        <div id="test-content-size">
+
+                            <img class="img-thumbnail pull-left" id="user-pic-inside-popover" src="images/Original_Size/no-image.png" alt=""/>
+
+                            <p id="user-name">Faizan Shakeel</p>
+                            <p id="user-role">Quality Assurance</p>
+                            <p id="user-email">faizan.sg@gmail.com</p>
+
+                            <form action="/Sign_Out" class="form-signout" method="get" >
+                                <button class="btn btn-success" id="testing-signout-button"  type="submit">Sign Out</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<!-------------------------------------------------------------------- Navigation Bar Fixed Top -----------------------------------------------------------------------END-->
+
+
+<!-------------------------------------------------------Row-Containing-Buttons-For-Menu-&-Chatting-Panel--------------------------------------------------------------START-->
+
+<div class="row hidden-xs" id="test-second-custom-bar">
+
+    <div class="col-lg-2 col-md-2 col-sm-2" id="123">
+        <button class="btn btn-default" id="menu-opener">Menu <span class="glyphicon glyphicon-book" id="icon-main-options-color"></span></button>
+    </div>
+
+    <div class="btn-group common-class" id="create-record">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Create <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Project</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Task</a></li>
+            <li class="divider"></li>
+            <li><a href="#">File</a></li>
+            <li class="divider"></li>
+            <li><a href="#">User</a></li>
+        </ul>
+
+    </div>
+
+    <button class="btn btn-default common-class" id="edit-record">Edit <span class="glyphicon glyphicon-edit" id="icon-edit-record-color"></span></button>
+    <button class="btn btn-default common-class" id="delete-record">Delete <span class="glyphicon glyphicon-remove" id="icon-delete-record-color"></span></button>
+
+
+
+    <!--<div class="col-lg-1 col-md-2 col-sm-2" id="1234">-->
+        <!--<button class="btn btn-default" id="edit-record">Edit <span class="glyphicon glyphicon-edit" id="icon-main-options-color3"></span></button>-->
+    <!--</div>-->
+
+    <!--<div class="col-lg-3 col-md-3 col-sm-3">-->
+    <!--<a href="" id="notification-alert-tag"><span class="glyphicon glyphicon-comment" id="notification-alert"></span> [ <strong id="current-notifications">0</strong> ]</a>-->
+    <!--</div>-->
+
+    <!--<div class="well-sm col-lg-1 col-md-1 col-sm-1 col-lg-push-4 col-md-push-4 col-sm-push-4" id="one-click-panels-expand">-->
+    <!--<button class="btn btn-default" id="expand-tooltip" data-toggle="tooltip" data-original-title="Expand"><i class="fa fa-angle-double-left" id="expand-left"></i><i class="fa fa-angle-double-right" id="expand-right"></i></button>-->
+    <!--<button class="btn btn-default" id="contract-tooltip" data-toggle="tooltip" data-original-title="Contract" style="display: none"><i class="fa fa-angle-double-right" id="contract-left"></i><i class="fa fa-angle-double-left" id="contract-right"></i></button>-->
+    <!--</div>-->
+
+    <!--<div class="col-lg-1 col-md-1 col-sm-1 col-lg-push-4 col-md-push-4 col-sm-push-4" id="one-click-panels-expand">-->
+    <div class="col-lg-1 col-md-1 col-sm-1 col-lg-push-4 col-md-push-4 col-sm-push-4" id="one-click-panels-expand">
+        <button class="btn btn-default" id="expand-tooltip" data-toggle="tooltip" data-original-title="Expand"><i class="fa fa-angle-double-left" id="expand-left"></i><i class="fa fa-angle-double-right" id="expand-right"></i></button>
+        <button class="btn btn-default" id="contract-tooltip" data-toggle="tooltip" data-original-title="Contract" style="display: none"><i class="fa fa-angle-double-right" id="contract-left"></i><i class="fa fa-angle-double-left" id="contract-right"></i></button>
+    </div>
+
+    <!--<div class="col-lg-3 col-md-3 col-sm-2 col-lg-push-1">-->
+    <!--<a href="" id="online-colleagues-count-tag"><span class="glyphicon glyphicon-user" id="online-colleagues-count"></span> [ <strong id="current-users-online">0</strong> ]</a>-->
+    <!--</div>-->
+
+    <div class="col-lg-2 col-md-2 col-sm-2 pull-right">
+        <button class="btn btn-default" id="chatting-list-opener">Work Together <span class="glyphicon glyphicon-comment" id="icon-chat-list-color"></span></button>
+    </div>
+
+</div>
+
+
+<!-------------------------------------------------------Row-Containing-Buttons-For-Menu-&-Chatting-Panel----------------------------------------------------------------END-->
+
+
+<!-------------------------------------------------------Row-Containing-Accordion-&-Table-&-Chatting-Panel-------------------------------------------------------------START-->
+
+<div class="row" id="third-row">
+
+<aside class="panel-group col-lg-2 col-md-2 col-sm-2" id="accordion">
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h5 class="panel-title text-center">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                Dashboard
+            </a>
+        </h5>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+        <div class="panel-body accordion-height">
+
+            <!--content-->
+
+            <!--<a href="#" id="project-popover" class="btn btn-default center-block" rel="popover" data-original-title="Project"><i class="fa fa-bar-chart-o pull-left" id="test1"></i>Projects</a>-->
+            <!--<a href="#" id="task-popover" class="btn btn-default center-block" rel="popover" data-original-title="Task"><i class="fa fa-tasks pull-left" id="test2"></i>Tasks</a>-->
+            <!--<a href="#" id="file-popover" class="btn btn-default center-block" rel="popover" data-original-title="File"><i class="fa fa-files-o pull-left" id="test3"></i>Files</a>-->
+            <!--<a href="#" id="user-popover" class="btn btn-default center-block" rel="popover" data-original-title="User"><i class="fa fa-users pull-left" id="test4"></i>Users</a>-->
+
+            <a href="#" id="project-popover" class="btn btn-default center-block"><i class="fa fa-bar-chart-o pull-left" id="test1"></i>Create Project</a>
+            <a href="#" id="task-popover" class="btn btn-default center-block"><i class="fa fa-tasks pull-left" id="test2"></i>Create Task</a>
+            <a href="#" id="file-popover" class="btn btn-default center-block"><i class="fa fa-files-o pull-left" id="test3"></i>Create File</a>
+            <a href="#" id="user-popover" class="btn btn-default center-block"><i class="fa fa-users pull-left" id="test4"></i>Create User</a>
+
+            <!--<div class="project-popover-buttons" id="project-popover-buttons" style="display: none">-->
+                <!--<button class="btn btn-default btn-block" id="new-project" data-toggle="modal" data-target="#new-project-modal-form">New</button>-->
+                <!--<button class="btn btn-default btn-block" id="edit-project">Edit</button>-->
+                <!--<button class="btn btn-default btn-block" id="search-project">Search</button>-->
+            <!--</div>-->
+
+            <!--<div class="task-popover-buttons" id="task-popover-buttons" style="display: none">-->
+                <!--<button class="btn btn-default btn-block" id="new-task" data-toggle="modal" data-target="#new-task-modal-form">New</button>-->
+                <!--<button class="btn btn-default btn-block" id="edit-task">Edit</button>-->
+                <!--<button class="btn btn-default btn-block" id="search-task">Search</button>-->
+            <!--</div>-->
+
+            <!--<div class="file-popover-buttons" id="file-popover-buttons" style="display: none">-->
+                <!--<button class="btn btn-default btn-block" id="new-file" data-toggle="modal" data-target="#new-file-modal-form">New</button>-->
+                <!--<button class="btn btn-default btn-block" id="edit-file">Edit</button>-->
+                <!--<button class="btn btn-default btn-block" id="search-file">Search</button>-->
+            <!--</div>-->
+
+            <!--<div class="user-popover-buttons" id="user-popover-buttons" style="display: none">-->
+                <!--<button class="btn btn-default btn-block" id="new-user" data-toggle="modal" data-target="#new-user-modal-form">New</button>-->
+                <!--<button class="btn btn-default btn-block" id="edit-user">Edit</button>-->
+                <!--<button class="btn btn-default btn-block" id="search-user">Search</button>-->
+            <!--</div>-->
+
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading" id="notifications-panel">
+        <h5 class="panel-title text-center">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                Notifications
+            </a>
+        </h5>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse">
+        <div class="panel-body accordion-height" id="accordion-notification">
+
+            <!--content-->
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 1</a><span> modified project </span><a href="">P00101</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">12.02.2013</span>
+                    <span class="pull-right">14:24</span>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 7</a><span> changed status of project </span><a href="">P00200</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">02.08.2013</span>
+                    <span class="pull-right">01:41</span>
+                </div>
+
+
+            </div>
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 2</a><span> joined in project </span><a href="">P00008</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">09.12.2013</span>
+                    <span class="pull-right">16:11</span>
+                </div>
+
+            </div>
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 1</a><span> modified project </span><a href="">P00101</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">12.02.2013</span>
+                    <span class="pull-right">14:24</span>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 7</a><span> changed status of project </span><a href="">P00200</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">02.08.2013</span>
+                    <span class="pull-right">01:41</span>
+                </div>
+
+
+            </div>
+
+            <div class="panel panel-default custom-notification-panel-style">
+
+                <div class="panel-body custom-notification-panel-body-style">
+                    <a href="">User 2</a><span> joined in project </span><a href="">P00008</a>
+                </div>
+
+                <div class="panel-footer custom-notification-panel-footer-style">
+                    <span class="pull-left">09.12.2013</span>
+                    <span class="pull-right">16:11</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading" id="history-panel">
+        <h5 class="panel-title text-center">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                History
+            </a>
+        </h5>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse">
+        <div class="panel-body accordion-height" id="accordion-history">
+
+            <!--content-->
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">P00101</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">F00004</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">User 2</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">T00019</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">F00131</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">User 8</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">P00101</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">User 2</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">P00021</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">F00071</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">User 12</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">T00012</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">F00042</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">P00021</a>
+                </div>
+            </div>
+
+            <div class="panel panel-default custom-history-panel-style">
+                <div class="panel-body custom-history-panel-body-style">
+                    <a href="">T00031</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</aside>
+<!--Accordion With Popover-->
+
+<!--Table-->
+
+<div class="table-responsive">
+<section class="col-lg-8 col-md-8 col-sm-8" id="table-width">
+
+<ul class="nav nav-tabs nav-justified" id="get-active-tab">
+    <li><a href="#projects-tab-content" data-toggle="tab" id="projects-tab">Projects</a></li>
+    <li><a href="#tasks-tab-content" data-toggle="tab" id="tasks-tab">Tasks</a></li>
+    <li><a href="#files-tab-content" data-toggle="tab" id="files-tab">Files</a></li>
+    <li><a href="#users-tab-content" data-toggle="tab" id="users-tab">Users</a></li>
+</ul>
+
+<div class="tab-content">
+<div class="tab-pane fade in active" id="projects-tab-content">
+
+    <table class="table table-hover table-striped" id="table-projects-id">
+        <thead id="opasdpamwd">
+        <tr>
+            <th width="4%">
+                <input type="checkbox" value="None" class="css-checkbox parent-check-project" id="project-table-checkbox-parent" name="new-style-checkbox" />
+                <label class="css-label lite-gray-check" for="project-table-checkbox-parent"></label>
+            </th>
+            <th>Project Name</th>
+            <th>Status</th>
+            <th>Department</th>
+            <th>Target Date</th>
+            <th>Date Started</th>
+            <th>Budget</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+
+</div>
+
+<div class="tab-pane fade" id="tasks-tab-content">
+
+    <table class="table table-hover table-striped" id="table-tasks-id">
+        <thead id="task-table-head">
+        <tr>
+            <th width="4%">
+                <input type="checkbox" value="None" class="css-checkbox lrg parent-check-task" id="task-table-checkbox-parent" name="new-style-checkbox" />
+                <label class="css-label lite-gray-check" for="task-table-checkbox-parent"></label>
+            </th>
+            <th>Task Name</th>
+            <th>Status</th>
+            <th>Department</th>
+            <th>Target Date</th>
+            <th>Date Started</th>
+            <th>Task Leader</th>
+        </tr>
+        </thead>
+
+        <tbody id="task-table-body">
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-1" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-1"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-2" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-2"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-3" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-3"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-4" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-4"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-5" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-5"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-task" id="task-table-checkbox-6" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="task-table-checkbox-6"></label>-->
+        <!--</td>-->
+        <!--<td>T00000</td>-->
+        <!--<td>Quality Check</td>-->
+        <!--<td>IT</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--<td>John Smith</td>-->
+        <!--</tr>-->
+
+
+        </tbody>
+    </table>
+
+</div>
+
+<div class="tab-pane fade" id="files-tab-content">
+
+
+    <table class="table table-hover table-striped" id="table-files-id">
+        <thead id="file-table-head">
+        <tr>
+            <th width="4%">
+                <input type="checkbox" value="None" class="css-checkbox lrg parent-check-file" id="file-table-checkbox-parent" name="new-style-checkbox" />
+                <label class="css-label lite-gray-check" for="file-table-checkbox-parent"></label>
+            </th>
+            <th>File Name</th>
+            <th>Type</th>
+            <th>Size</th>
+            <th>Created</th>
+            <th>Last Modified</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-file" id="file-table-checkbox-1" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="file-table-checkbox-1"></label>-->
+        <!--</td>-->
+        <!--<td>F00000</td>-->
+        <!--<td>PDF</td>-->
+        <!--<td>1.5 MB</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-file" id="file-table-checkbox-2" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="file-table-checkbox-2"></label>-->
+        <!--</td>-->
+        <!--<td>F00000</td>-->
+        <!--<td>PDF</td>-->
+        <!--<td>1.5 MB</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--</tr>-->
+
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-file" id="file-table-checkbox-3" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="file-table-checkbox-3"></label>-->
+        <!--</td>-->
+        <!--<td>F00000</td>-->
+        <!--<td>PDF</td>-->
+        <!--<td>1.5 MB</td>-->
+        <!--<td>12.11.2013</td>-->
+        <!--<td>07.23.2011</td>-->
+        <!--</tr>-->
+
+        </tbody>
+    </table>
+
+</div>
+
+<div class="tab-pane fade" id="users-tab-content">
+
+    <table class="table table-hover table-striped" id="table-users-id">
+        <thead id="user-table-head">
+        <tr>
+            <th width="4%">
+                <input type="checkbox" value="None" class="css-checkbox lrg parent-check-user" id="user-table-checkbox-parent" name="new-style-checkbox" />
+                <label class="css-label lite-gray-check" for="user-table-checkbox-parent"></label>
+            </th>
+            <th>User Name</th>
+            <th>Department</th>
+            <th>Designation</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<input type="checkbox" value="None" class="css-checkbox lrg child-check-user" id="user-table-checkbox-1" name="new-style-checkbox" />-->
+        <!--<label class="css-label lite-gray-check" for="user-table-checkbox-1"></label>-->
+        <!--</td>-->
+        <!--<td>U00000</td>-->
+        <!--<td>Security</td>-->
+        <!--<td>Quality Assurance Supervisor</td>-->
+        <!--</tr>-->
+
+        </tbody>
+    </table>
+
+</div>
+</div>
+
+<div class="well-lg pull-left" id="well-left-project">
+
+    <p id="no-of-rec-project">Showing <strong id="projectCurrentSetFrom"></strong> to<strong id="projectCurrentSetTo"></strong> of <strong id="totalRecordsProject"></strong> Projects</p>
+
+</div>
+
+<div class="well-sm pull-right" id="well-right-project">
+
+    <ul class="pager pull-right" id="pager-right-project">
+        <li class="previous disabled" id="previousPageProject"><a href="#">&larr; Previous</a></li>
+        <li class="next" id="nextPageProject"><a href="#">Next &rarr;</a></li>
+    </ul>
+
+</div>
+
+
+<div class="well-lg pull-left" id="well-left-task" style="display: none;">
+
+    <p id="no-of-rec-task">Showing <strong id="taskCurrentSetFrom"></strong> to<strong id="taskCurrentSetTo"></strong> of <strong id="totalRecordsTask"></strong> Tasks</p>
+
+</div>
+
+<div class="well-sm pull-right" id="well-right-task" style="display: none;">
+
+    <ul class="pager pull-right" id="pager-right-task">
+        <li class="previous disabled" id="previousPageTask"><a href="#">&larr; Previous</a></li>
+        <li class="next" id="nextPageTask"><a href="#">Next &rarr;</a></li>
+    </ul>
+
+</div>
+
+<div class="well-lg pull-left" id="well-left-file" style="display: none;">
+
+    <p id="no-of-rec-file">Showing <strong id="fileCurrentSetFrom"></strong> to<strong id="fileCurrentSetTo"></strong> of <strong id="totalRecordsFile"></strong> Files</p>
+
+</div>
+
+<div class="well-sm pull-right" id="well-right-file" style="display: none;">
+
+    <ul class="pager pull-right" id="pager-right-file">
+        <li class="previous disabled" id="previousPageFile"><a href="#">&larr; Previous</a></li>
+        <li class="next" id="nextPageFile"><a href="#">Next &rarr;</a></li>
+    </ul>
+
+</div>
+
+<div class="well-lg pull-left" id="well-left-user" style="display: none;">
+
+    <p id="no-of-rec-user">Showing <strong id="userCurrentSetFrom"></strong> to<strong id="userCurrentSetTo"></strong> of <strong id="totalRecordsUser"></strong> Users</p>
+
+</div>
+
+<div class="well-sm pull-right" id="well-right-user" style="display: none;">
+
+    <ul class="pager pull-right" id="pager-right-user">
+        <li class="previous disabled" id="previousPageUser"><a href="#">&larr; Previous</a></li>
+        <li class="next" id="nextPageUser"><a href="#">Next &rarr;</a></li>
+    </ul>
+
+</div>
+
+</section>
+
+</div>
+
+
+<!------------------------------------------------------------------------ Context Menu --------------------------------------------------------------------------START-->
+<div class="dropdown clearfix" id="contextMenu">
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display:block;position:static;margin-bottom:5px;">
+        <li><a tabindex="-1" href="#"><i class="fa fa-plus-square-o fa-fw"></i> New</a></li>
+        <li><a tabindex="-1" href="#"><i class="fa fa-info fa-fw"></i> Info</a></li>
+        <li><a tabindex="-1" href="#"><i class="fa fa-pencil-square-o fa-fw"></i> Edit</a></li>
+        <li><a tabindex="-1" href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
+    </ul>
+</div>
+<!------------------------------------------------------------------------ Context Menu --------------------------------------------------------------------------END-->
+
+
+<!------------------------------------------------------------------------ Chatting List -----------------------------------------------------------------------START-->
+<aside class="col-lg-2 col-md-2 col-sm-2" id="chatting-list-fixed">
+    <div class="panel panel-default" id="chatting-list-panel">
+        <div class="panel-heading" id="chat-panel-heading">Chat</div>
+
+        <ul class="list-group" id="chat-ul">
+            <li class="list-group-item">User 1</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 2</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 3</li>
+            <li class="list-group-item">User 4</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 5</li>
+            <li class="list-group-item">User 6</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 7</li>
+            <li class="list-group-item">User 8</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 9</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 10</li>
+            <li class="list-group-item">User 11</li>
+            <li class="list-group-item">User 12</li>
+            <li class="list-group-item">User 13</li>
+            <li class="list-group-item"><i class="fa fa-circle-o"></i>User 14</li>
+            <li class="list-group-item">User 15</li>
+
+        </ul>
+
+    </div>
+</aside>
+<!------------------------------------------------------------------------ Chatting List -----------------------------------------------------------------------END-->
+</div>
+
+
+<!-------------------------------------------------------Row-Containing-Accordion-&-Table-&-Chatting-Panel---------------------------------------------------------------END-->
+
+
+<!---------------------------------------------------------------------- Navigation Bar Bottom ---------------------------------------------------------------------------START-->
+
+<!--<footer class="navbar navbar-default navbar-fixed-bottom" id="navbar-bottom">-->
+<!--<div class="navbar-text pull-left" id="nav-bottom-elem-left">-->
+<!--JavaScript Project (PMS)-->
+<!--</div>-->
+<!--<a class="btn navbar-btn pull-right" id="nav-bottom-elem-right">PMS</a>-->
+<!--</footer>-->
+
+
+<footer class="navbar navbar-default navbar-fixed-bottom hidden-xs" id="navbar-bottom">
+    <p id="nav-bottom-elem-left">Advanced JavaScript Project (PMS)</p>
+</footer>
+
+
+
+<!---------------------------------------------------------------------- Navigation Bar Bottom -----------------------------------------------------------------------------END-->
+
+
+<!------------------------------------------------------------------- Modal [ Add New Project ] --------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="new-project-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="new-project-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="new-project-modal-form-heading">Create New Project</h4>
+            </div>
+            <div class="modal-body" id="new-project-modal-body">
+
+                <form action="/new_Project" class="form-horizontal" id="project-create-form" role="form" method="post">
+                    <div class="form-group">
+                        <label for="projectName" class="col-lg-2 control-label">Project Name</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control input-lg" id="projectName" placeholder="Enter Project Name" name="project_Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="projectDepartment" class="col-lg-2 control-label">Department</label>
+                            <div class="col-lg-3">
+                                <select class="form-control input-lg" id="projectDepartment" name="project_Department">
+                                    <option>IT</option>
+                                    <option>HR</option>
+                                    <option>Sales</option>
+                                    <option>Finance</option>
+                                    <option>Security</option>
+                                    <option>Marketing</option>
+                                    <option>Administration</option>
+                                    <option>Customer Service</option>
+                                    <option>Quality Assurance</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectStartDate" class="col-lg-2 control-label">Start Date</label>
+                        <div class="col-lg-4">
+                            <input type="date" class="form-control input-lg" id="projectStartDate" name="project_StartDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectEndDate" class="col-lg-2 control-label">END Date</label>
+                            <div class="col-lg-3">
+                                <input type="date" class="form-control input-lg" id="projectEndDate" name="project_EndDate">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectDescription" class="col-lg-2 control-label">Description</label>
+                        <div class="col-lg-9">
+                            <textarea class="form-control input-lg" name="project_Description" id="projectDescription" form="project-create-form" rows="5" placeholder="Enter Project Description"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" id="projectCreateButton" form="project-create-form">Create</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!------------------------------------------------------------------- Modal [ Add New Project ] ---------------------------------------------------------------------------END-->
+
+<!------------------------------------------------------------------- Modal [ Add New Task ] --------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="new-task-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="new-task-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="new-task-modal-form-heading">Create New Task</h4>
+            </div>
+            <div class="modal-body" id="new-task-modal-body">
+                <form action="/new_Task" class="form-horizontal" id="task-create-form" role="form" method="post">
+                    <div class="form-group">
+                        <label for="taskName" class="col-lg-2 control-label">Task Name</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control input-lg" id="taskName" placeholder="Task" name="taskName">
+                        </div>
+                        <div class="form-group">
+                            <label for="taskDepartment" class="col-lg-2 control-label">Department</label>
+                            <div class="col-lg-3">
+                                <select class="form-control input-lg" id="taskDepartment" name="taskDepartment">
+                                    <option>IT</option>
+                                    <option>HR</option>
+                                    <option>Sales</option>
+                                    <option>Finance</option>
+                                    <option>Security</option>
+                                    <option>Marketing</option>
+                                    <option>Administration</option>
+                                    <option>Customer Service</option>
+                                    <option>Quality Assurance</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskStartDate" class="col-lg-2 control-label">Start Date</label>
+                        <div class="col-lg-4">
+                            <input type="date" class="form-control input-lg" id="taskStartDate" name="taskStartDate">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="taskEndDate" class="col-lg-2 control-label">END Date</label>
+                            <div class="col-lg-3">
+                                <input type="date" class="form-control input-lg" id="taskEndDate" name="taskEndDate">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="taskProject" class="col-lg-2 control-label">Project</label>
+                        <div class="col-lg-3">
+                            <select class="form-control input-lg" id="taskProject" name="taskProject">
+                                <option>P00001</option>
+                                <option>P00002</option>
+                                <option>P00003</option>
+                                <option>P00004</option>
+                                <option>P00005</option>
+                                <option>P00006</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="taskDescription" class="col-lg-2 control-label">Description</label>
+                        <div class="col-lg-9">
+                            <textarea class="form-control input-lg" name="task_Description" id="taskDescription" form="task-create-form" rows="5" placeholder="Enter Task Description"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" id="taskCreateButton" form="task-create-form">Create</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!------------------------------------------------------------------- Modal [ Add New Task ] ---------------------------------------------------------------------------END-->
+
+<!------------------------------------------------------------------- Modal [ Add New File ] --------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="new-file-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="new-file-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="new-file-modal-form-heading">Create New File</h4>
+            </div>
+            <div class="modal-body" id="new-file-modal-body">
+                <form class="form-horizontal" id="file-create-form" role="form" method="post">
+                    <input type="file" name="uploadFile" id="testClickToUpload" style="visibility: hidden">
+                    <!--<input type="file" name="uploadFile" id="testClickToUpload">-->
+
+                    <!--<button class="btn btn-default" id="getToClickRealButton">Upload File</button>-->
+                    <!--<input type="text" class=" form-control input-lg" id="showFileInHere"/>-->
+
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                <span class="input-group-btn">
+                                    <!--<button class="btn btn-default" type="button">Choose File</button>-->
+                                    <button class="btn btn-default btn-lg" type="button" id="getToClickRealButton">Choose File To Upload</button>
+                                </span>
+                                    <input type="text" class="form-control input-lg" id="showFileInHere">
+                                </div>
+                            </div>
+                        </div>
+
+                    <br/>
+
+                    <div class="form-group">
+                        <label for="fileDescription" class="col-lg-2 control-label">Description</label>
+                        <div class="col-lg-9">
+                            <textarea class="form-control input-lg" name="file_Description" id="fileDescription" form="file-create-form" rows="5" placeholder="Enter File Description"></textarea>
+                        </div>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" form="file-create-form" id="fileUpload">Upload</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!------------------------------------------------------------------- Modal [ Add New File ] ---------------------------------------------------------------------------END-->
+
+<!------------------------------------------------------------------- Modal [ Add New User ] --------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="new-user-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="new-user-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="new-user-modal-form-heading">Create New User</h4>
+            </div>
+            <div class="modal-body" id="new-user-modal-body">
+                <form class="form-horizontal" id="user-create-form" role="form">
+                    <div class="form-group">
+                        <label for="userName" class="col-lg-2 control-label">User Name</label>
+                        <div class="col-lg-4">
+                            <input type="text" class="form-control input-lg" id="userName" placeholder="Project">
+                        </div>
+                        <div class="form-group">
+                            <label for="userDepartment" class="col-lg-2 control-label">Department</label>
+                            <div class="col-lg-3">
+                                <select class="form-control input-lg" id="userDepartment">
+                                    <option>IT</option>
+                                    <option>HR</option>
+                                    <option>Sales</option>
+                                    <option>Finance</option>
+                                    <option>Security</option>
+                                    <option>Marketing</option>
+                                    <option>Administration</option>
+                                    <option>Customer Service</option>
+                                    <option>Quality Assurance</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userEmail" class="col-lg-2 control-label">User Email</label>
+                        <div class="col-lg-4">
+                            <input type="email" class="form-control input-lg" id="userEmail" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="userDesignation" class="col-lg-2 control-label">Designation</label>
+                            <div class="col-lg-3">
+                                <input type="text" class="form-control input-lg" id="userDesignation" placeholder="Designation">
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--<input type="image"/>-->
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" id="userCreateButton" form="user-create-form">Create</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!------------------------------------------------------------------- Modal [ Add New User ] ---------------------------------------------------------------------------END-->
+
+<!------------------------------------------------------------------- Modal [ Delete Project Confirmation Dialog ] ---------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="delete-project-confirmation-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="delete-project-confirmation-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Delete Record</h4>
+            </div>
+            <div class="modal-body" id="delete-project-confirmation-modal-body">
+
+                Are You Sure You Want To Delete This Project?
+
+            </div>
+
+            <form action="/deleteProject" id="user-delete-form" method="post">
+
+                <input type="text" id="get-hidden-row-data" name="aba" style="visibility: hidden"/>
+
+            </form>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" form="user-delete-form">Delete</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!------------------------------------------------------------------- Modal [ Delete Project Confirmation Dialog ] ---------------------------------------------------------------------------END-->
+
+<!------------------------------------------------------------------- Modal [ Delete Task Confirmation Dialog ] ---------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="delete-task-confirmation-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="delete-task-confirmation-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Delete Record</h4>
+            </div>
+            <div class="modal-body" id="delete-task-confirmation-modal-body">
+
+                Are You Sure You Want To Delete This Task?
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" form="user-create-form">Delete</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!------------------------------------------------------------------- Modal [ Delete Task Confirmation Dialog ] ---------------------------------------------------------------------------END-->
+<!------------------------------------------------------------------- Modal [ Delete File Confirmation Dialog ] ---------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="delete-file-confirmation-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="delete-file-confirmation-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Delete Record</h4>
+            </div>
+            <div class="modal-body" id="delete-file-confirmation-modal-body">
+
+                Are You Sure You Want To Delete This File?
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" form="user-create-form">Delete</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!------------------------------------------------------------------- Modal [ Delete File Confirmation Dialog ] ---------------------------------------------------------------------------END-->
+<!------------------------------------------------------------------- Modal [ Delete User Confirmation Dialog ] ---------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="delete-user-confirmation-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="delete-user-confirmation-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Delete Record</h4>
+            </div>
+            <div class="modal-body" id="delete-user-confirmation-modal-body">
+
+                Are You Sure You Want To Delete This User?
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" form="user-create-form">Delete</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!------------------------------------------------------------------- Modal [ Delete User Confirmation Dialog ] ---------------------------------------------------------------------------END-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------------- Modal [ Project Info ] ---------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="info-project-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="info-project-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Project Info</h4>
+            </div>
+            <div class="modal-body" id="info-project-modal-body">
+
+                <ul class="nav nav-tabs nav-justified">
+                    <li><a href="#project-in-project-info" data-toggle="tab" id="info-project-active-tab-in-project">Project</a></li>
+                    <li><a href="#tasks-in-project-info" data-toggle="tab">Tasks</a></li>
+                    <li><a href="#files-in-project-info" data-toggle="tab">Files</a></li>
+                    <li><a href="#users-in-project-info" data-toggle="tab">Users</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="project-in-project-info">
+                        <br/>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Name</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Status</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Status
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Department</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Department
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Target Date</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Target Date
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Start Date</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Start Date
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">End Date</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        End Date
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Description</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Description
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="tasks-in-project-info">
+                        <br/>
+
+                        <div class="panel panel-default" id="tasks-list-panel">
+                            <div class="panel-heading" id="tasks-panel-heading">Tasks</div>
+
+                            <ul class="list-group" id="tasks-ul">
+                                <li class="list-group-item">Task 1</li>
+                                <li class="list-group-item">Task 2</li>
+                                <li class="list-group-item">Task 3</li>
+                                <li class="list-group-item">Task 4</li>
+                                <li class="list-group-item">Task 5</li>
+                                <li class="list-group-item">Task 6</li>
+                                <li class="list-group-item">Task 7</li>
+                                <li class="list-group-item">Task 8</li>
+                                <li class="list-group-item">Task 9</li>
+                                <li class="list-group-item">Task 10</li>
+                                <li class="list-group-item">Task 11</li>
+                                <li class="list-group-item">Task 12</li>
+                                <li class="list-group-item">Task 13</li>
+                                <li class="list-group-item">Task 14</li>
+                                <li class="list-group-item">Task 15</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="files-in-project-info">
+                        <br/>
+
+                        <div class="panel panel-default" id="files-list-panel">
+                            <div class="panel-heading" id="files-panel-heading">Files</div>
+
+                            <ul class="list-group" id="files-ul">
+                                <li class="list-group-item">File 1</li>
+                                <li class="list-group-item">File 2</li>
+                                <li class="list-group-item">File 3</li>
+                                <li class="list-group-item">File 4</li>
+                                <li class="list-group-item">File 5</li>
+                                <li class="list-group-item">File 6</li>
+                                <li class="list-group-item">File 7</li>
+                                <li class="list-group-item">File 8</li>
+                                <li class="list-group-item">File 9</li>
+                                <li class="list-group-item">File 10</li>
+                                <li class="list-group-item">File 11</li>
+                                <li class="list-group-item">File 12</li>
+                                <li class="list-group-item">File 13</li>
+                                <li class="list-group-item">File 14</li>
+                                <li class="list-group-item">File 15</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="users-in-project-info">
+                        <br/>
+
+                        <div class="panel panel-default" id="users-list-panel">
+                            <div class="panel-heading" id="users-panel-heading">Users</div>
+
+                            <ul class="list-group" id="users-ul">
+                                <li class="list-group-item">User 1</li>
+                                <li class="list-group-item">User 2</li>
+                                <li class="list-group-item">User 3</li>
+                                <li class="list-group-item">User 4</li>
+                                <li class="list-group-item">User 5</li>
+                                <li class="list-group-item">User 6</li>
+                                <li class="list-group-item">User 7</li>
+                                <li class="list-group-item">User 8</li>
+                                <li class="list-group-item">User 9</li>
+                                <li class="list-group-item">User 10</li>
+                                <li class="list-group-item">User 11</li>
+                                <li class="list-group-item">User 12</li>
+                                <li class="list-group-item">User 13</li>
+                                <li class="list-group-item">User 14</li>
+                                <li class="list-group-item">User 15</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Create</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<!------------------------------------------------------------------- Modal [ Project Info ] ---------------------------------------------------------------------------END-->
+
+
+<!------------------------------------------------------------------- Modal [ Task Info ] ---------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="info-task-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="info-task-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Task Info</h4>
+            </div>
+            <div class="modal-body" id="info-task-modal-body">
+
+                <ul class="nav nav-tabs nav-justified">
+                    <li><a href="#projects-in-task-info" data-toggle="tab">Projects</a></li>
+                    <li><a href="#task-in-task-info" data-toggle="tab" id="info-task-active-tab-in-task">Task</a></li>
+                    <li><a href="#files-in-task-info" data-toggle="tab">Files</a></li>
+                    <li><a href="#users-in-task-info" data-toggle="tab">Users</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade" id="projects-in-task-info">
+                        <br/>
+                        <div class="panel panel-default" id="tasks-list-panel-in-task-info">
+                            <div class="panel-heading" id="tasks-panel-heading-in-task-info">Tasks</div>
+
+                            <ul class="list-group" id="tasks-ul-in-task-info">
+                                <li class="list-group-item">Project 1</li>
+                                <li class="list-group-item">Project 2</li>
+                                <li class="list-group-item">Project 3</li>
+                                <li class="list-group-item">Project 4</li>
+                                <li class="list-group-item">Project 5</li>
+                                <li class="list-group-item">Project 6</li>
+                                <li class="list-group-item">Project 7</li>
+                                <li class="list-group-item">Project 8</li>
+                                <li class="list-group-item">Project 9</li>
+                                <li class="list-group-item">Project 10</li>
+                                <li class="list-group-item">Project 11</li>
+                                <li class="list-group-item">Project 12</li>
+                                <li class="list-group-item">Project 13</li>
+                                <li class="list-group-item">Project 14</li>
+                                <li class="list-group-item">Project 15</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                    <div class="tab-pane fade in active" id="task-in-task-info">
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Name</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Status</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Status
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Department</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Department
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Target Date</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Target Date
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Start Date</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Start Date
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">End Date</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        End Date
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Description</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Description
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="tab-pane fade" id="files-in-task-info">
+                        <br/>
+
+                        <div class="panel panel-default" id="files-list-panel-in-task-info">
+                            <div class="panel-heading" id="files-panel-heading-in-task-info">Files</div>
+
+                            <ul class="list-group" id="files-ul-in-task-info">
+                                <li class="list-group-item">File 1</li>
+                                <li class="list-group-item">File 2</li>
+                                <li class="list-group-item">File 3</li>
+                                <li class="list-group-item">File 4</li>
+                                <li class="list-group-item">File 5</li>
+                                <li class="list-group-item">File 6</li>
+                                <li class="list-group-item">File 7</li>
+                                <li class="list-group-item">File 8</li>
+                                <li class="list-group-item">File 9</li>
+                                <li class="list-group-item">File 10</li>
+                                <li class="list-group-item">File 11</li>
+                                <li class="list-group-item">File 12</li>
+                                <li class="list-group-item">File 13</li>
+                                <li class="list-group-item">File 14</li>
+                                <li class="list-group-item">File 15</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="users-in-task-info">
+                        <br/>
+
+                        <div class="panel panel-default" id="users-list-panel-in-task-info">
+                            <div class="panel-heading" id="users-panel-heading-in-task-info">Users</div>
+
+                            <ul class="list-group" id="users-ul-in-task-info">
+                                <li class="list-group-item">User 1</li>
+                                <li class="list-group-item">User 2</li>
+                                <li class="list-group-item">User 3</li>
+                                <li class="list-group-item">User 4</li>
+                                <li class="list-group-item">User 5</li>
+                                <li class="list-group-item">User 6</li>
+                                <li class="list-group-item">User 7</li>
+                                <li class="list-group-item">User 8</li>
+                                <li class="list-group-item">User 9</li>
+                                <li class="list-group-item">User 10</li>
+                                <li class="list-group-item">User 11</li>
+                                <li class="list-group-item">User 12</li>
+                                <li class="list-group-item">User 13</li>
+                                <li class="list-group-item">User 14</li>
+                                <li class="list-group-item">User 15</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Create</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<!------------------------------------------------------------------- Modal [ Task Info ] ---------------------------------------------------------------------------END-->
+
+
+
+
+
+
+<!------------------------------------------------------------------- Modal [ File Info ] ---------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="info-file-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="info-file-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">File Info</h4>
+            </div>
+            <div class="modal-body" id="info-file-modal-body">
+
+                <ul class="nav nav-tabs nav-justified">
+                    <li><a href="#projects-in-file-info" data-toggle="tab">Projects</a></li>
+                    <li><a href="#tasks-in-file-info" data-toggle="tab">Tasks</a></li>
+                    <li><a href="#file-in-file-info" data-toggle="tab" id="info-file-active-tab-in-file">File</a></li>
+                    <li><a href="#users-in-file-info" data-toggle="tab">Users</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade" id="projects-in-file-info">
+                        <br/>
+
+                        <div class="panel panel-default" id="files-list-panel-in-file-info">
+                            <div class="panel-heading" id="files-panel-heading-in-file-info">Files</div>
+
+                            <ul class="list-group" id="projects-ul-in-file-info">
+                                <li class="list-group-item">Project 1</li>
+                                <li class="list-group-item">Project 2</li>
+                                <li class="list-group-item">Project 3</li>
+                                <li class="list-group-item">Project 4</li>
+                                <li class="list-group-item">Project 5</li>
+                                <li class="list-group-item">Project 6</li>
+                                <li class="list-group-item">Project 7</li>
+                                <li class="list-group-item">Project 8</li>
+                                <li class="list-group-item">Project 9</li>
+                                <li class="list-group-item">Project 10</li>
+                                <li class="list-group-item">Project 11</li>
+                                <li class="list-group-item">Project 12</li>
+                                <li class="list-group-item">Project 13</li>
+                                <li class="list-group-item">Project 14</li>
+                                <li class="list-group-item">Project 15</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="tasks-in-file-info">
+                        <br/>
+
+                        <div class="panel panel-default" id="tasks-list-panel-in-file-info">
+                            <div class="panel-heading" id="tasks-panel-heading-in-file-info">Tasks</div>
+
+                            <ul class="list-group" id="tasks-ul-in-file-info">
+                                <li class="list-group-item">Task 1</li>
+                                <li class="list-group-item">Task 2</li>
+                                <li class="list-group-item">Task 3</li>
+                                <li class="list-group-item">Task 4</li>
+                                <li class="list-group-item">Task 5</li>
+                                <li class="list-group-item">Task 6</li>
+                                <li class="list-group-item">Task 7</li>
+                                <li class="list-group-item">Task 8</li>
+                                <li class="list-group-item">Task 9</li>
+                                <li class="list-group-item">Task 10</li>
+                                <li class="list-group-item">Task 11</li>
+                                <li class="list-group-item">Task 12</li>
+                                <li class="list-group-item">Task 13</li>
+                                <li class="list-group-item">Task 14</li>
+                                <li class="list-group-item">Task 15</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade in active" id="file-in-file-info">
+                        <br/>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Name</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Size</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Size
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Type</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Type
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Description</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Description
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="users-in-file-info">
+                        <br/>
+
+                        <div class="panel panel-default" id="users-list-panel-in-file-info">
+                            <div class="panel-heading" id="users-panel-heading-in-file-info">Users</div>
+
+                            <ul class="list-group" id="users-ul-in-file-info">
+                                <li class="list-group-item">User 1</li>
+                                <li class="list-group-item">User 2</li>
+                                <li class="list-group-item">User 3</li>
+                                <li class="list-group-item">User 4</li>
+                                <li class="list-group-item">User 5</li>
+                                <li class="list-group-item">User 6</li>
+                                <li class="list-group-item">User 7</li>
+                                <li class="list-group-item">User 8</li>
+                                <li class="list-group-item">User 9</li>
+                                <li class="list-group-item">User 10</li>
+                                <li class="list-group-item">User 11</li>
+                                <li class="list-group-item">User 12</li>
+                                <li class="list-group-item">User 13</li>
+                                <li class="list-group-item">User 14</li>
+                                <li class="list-group-item">User 15</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Create</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<!------------------------------------------------------------------- Modal [ File Info ] ---------------------------------------------------------------------------END-->
+
+
+
+
+<!------------------------------------------------------------------- Modal [ User Info ] ---------------------------------------------------------------------------START-->
+
+<div class="modal fade" id="info-user-modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <section class="modal-dialog" id="info-user-modal-id-for-custom-css">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">User Info</h4>
+            </div>
+            <div class="modal-body" id="info-user-modal-body">
+
+                <ul class="nav nav-tabs nav-justified">
+                    <li><a href="#projects-in-user-info" data-toggle="tab" id="info-project-active-tab-in-user">Projects</a></li>
+                    <li><a href="#tasks-in-user-info" data-toggle="tab" id="info-task-active-tab-in-user">Tasks</a></li>
+                    <li><a href="#files-in-user-info" data-toggle="tab" id="info-file-active-tab-in-user">Files</a></li>
+                    <li><a href="#user-in-user-info" data-toggle="tab" id="info-user-active-tab-in-user">User</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade" id="projects-in-user-info">
+                        <br/>
+
+                        <div class="panel panel-default" id="users-list-panel-in-user-info">
+                            <div class="panel-heading" id="users-panel-heading-in-user-info">Users</div>
+
+                            <ul class="list-group" id="projects-ul-in-user-info">
+                                <li class="list-group-item">Project 1</li>
+                                <li class="list-group-item">Project 2</li>
+                                <li class="list-group-item">Project 3</li>
+                                <li class="list-group-item">Project 4</li>
+                                <li class="list-group-item">Project 5</li>
+                                <li class="list-group-item">Project 6</li>
+                                <li class="list-group-item">Project 7</li>
+                                <li class="list-group-item">Project 8</li>
+                                <li class="list-group-item">Project 9</li>
+                                <li class="list-group-item">Project 10</li>
+                                <li class="list-group-item">Project 11</li>
+                                <li class="list-group-item">Project 12</li>
+                                <li class="list-group-item">Project 13</li>
+                                <li class="list-group-item">Project 14</li>
+                                <li class="list-group-item">Project 15</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="tasks-in-user-info">
+                        <br/>
+
+                        <div class="panel panel-default" id="tasks-list-panel-in-user-info">
+                            <div class="panel-heading" id="tasks-panel-heading-in-user-info">Tasks</div>
+
+                            <ul class="list-group" id="tasks-ul-in-user-info">
+                                <li class="list-group-item">Task 1</li>
+                                <li class="list-group-item">Task 2</li>
+                                <li class="list-group-item">Task 3</li>
+                                <li class="list-group-item">Task 4</li>
+                                <li class="list-group-item">Task 5</li>
+                                <li class="list-group-item">Task 6</li>
+                                <li class="list-group-item">Task 7</li>
+                                <li class="list-group-item">Task 8</li>
+                                <li class="list-group-item">Task 9</li>
+                                <li class="list-group-item">Task 10</li>
+                                <li class="list-group-item">Task 11</li>
+                                <li class="list-group-item">Task 12</li>
+                                <li class="list-group-item">Task 13</li>
+                                <li class="list-group-item">Task 14</li>
+                                <li class="list-group-item">Task 15</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade" id="files-in-user-info">
+                        <br/>
+
+                        <div class="panel panel-default" id="files-list-panel-in-user-info">
+                            <div class="panel-heading" id="files-panel-heading-in-user-info">Files</div>
+
+                            <ul class="list-group" id="files-ul-in-user-info">
+                                <li class="list-group-item">File 1</li>
+                                <li class="list-group-item">File 2</li>
+                                <li class="list-group-item">File 3</li>
+                                <li class="list-group-item">File 4</li>
+                                <li class="list-group-item">File 5</li>
+                                <li class="list-group-item">File 6</li>
+                                <li class="list-group-item">File 7</li>
+                                <li class="list-group-item">File 8</li>
+                                <li class="list-group-item">File 9</li>
+                                <li class="list-group-item">File 10</li>
+                                <li class="list-group-item">File 11</li>
+                                <li class="list-group-item">File 12</li>
+                                <li class="list-group-item">File 13</li>
+                                <li class="list-group-item">File 14</li>
+                                <li class="list-group-item">File 15</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-pane fade in active" id="user-in-user-info">
+                        <br/>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Name</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Email</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Size
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Department</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Type
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Designation</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Type
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title">Description</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        Description
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <!--<button type="button" class="btn btn-primary">Create</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </section><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<!------------------------------------------------------------------- Modal [ User Info ] ---------------------------------------------------------------------------END-->
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<!------------------------------------------------------------- MAIN CONTAINER (Write No HTML Outside) --------------------------------------------------------------------END-->
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/Third-Party-JS/bootstrap.min.js"></script>
+<!--[if lt IE 9]><script src="js/Third-Party-JS/html5shiv.js"><![endif]-->
+<script src="js/Third-Party-JS/popbox.js"></script>
+<script src="js/Third-Party-JS/bootstrap-tour.min.js"></script>
+<script src="js/Third-Party-JS/respond.js"></script>
+<script src="js/Third-Party-JS/jquery.slimscroll.js"></script>
+
+<!--Custom Scripts-->
+<script src="http://localhost:1337/socket.io/socket.io.js"></script>
+<script src="http://localhost:1338/socket.io/socket.io.js"></script>
+<script src="http://localhost:1339/socket.io/socket.io.js"></script>
+
+
+<script src="js/scrollbar.js"></script>
+<script src="js/navbar-top.js"></script>
+<script src="js/navbar2.js"></script>
+<script src="js/side-panels.js"></script>
+<script src="js/main-menu-popover.js"></script>
+<script src="js/table-work.js"></script>
+<script src="File_upload_client.js"></script>
+<script src="Online_Users_Client.js"></script>
+<script src="js/tour-wizard.js"></script>
+<script src="js/context-menu-modals.js"></script>
+
+<!--Custom Scripts-->
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+[
+    {
+        "name":"U00001",
+        "department":"Customer Service",
+        "designation":"Software Developer"
+    },
+    {
+        "name":"U00002",
+        "department":"Marketing",
+        "designation":"Tech Lead"
+    },
+    {
+        "name":"U00003",
+        "department":"IT",
+        "designation":"Application Engineer"
+    },
+    {
+        "name":"U00004",
+        "department":"Sales",
+        "designation":"Consultant"
+    },
+    {
+        "name":"U00005",
+        "department":"HR",
+        "designation":"Sofware Analyst/ Analyst"
+    },
+    {
+        "name":"U00006",
+        "department":"Finance",
+        "designation":"Software Architech"
+    },
+    {
+        "name":"U00007",
+        "department":"IT",
+        "designation":"Softwaer Testing"
+    },
+    {
+        "name":"U00008",
+        "department":"Marketing",
+        "designation":"Product Engineer"
+    },
+    {
+        "name":"U00009",
+        "department":"Sales",
+        "designation":"Engineer Softwaer Testing"
+    },
+    {
+        "name":"U00010",
+        "department":"HR",
+        "designation":"Application Developer"
+    },
+    {
+        "name":"U00011",
+        "department":"Administration",
+        "designation":"Product Head"
+    },
+    {
+        "name":"U00012",
+        "department":"IT",
+        "designation":"Proj Manager"
+    },
+    {
+        "name":"U00013",
+        "department":"Marketing",
+        "designation":"Software Developer"
+    },
+    {
+        "name":"U00014",
+        "department":"Administration",
+        "designation":"Assistant Proj Manager"
+    },
+    {
+        "name":"U00015",
+        "department":"HR",
+        "designation":"Team Lead"
+    },
+    {
+        "name":"U00016",
+        "department":"Marketing",
+        "designation":"Design Engineer "
+    },
+    {
+        "name":"U00017",
+        "department":"Customer Service",
+        "designation":"Sofware Analyst/ Analyst"
+    },
+    {
+        "name":"U00018",
+        "department":"Sales",
+        "designation":"Consultant"
+    },
+    {
+        "name":"U00019",
+        "department":"Finance",
+        "designation":"Test Lead"
+    },
+    {
+        "name":"U00020",
+        "department":"HR",
+        "designation":"Proj Manager"
+    }
+]
